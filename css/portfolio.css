@@ -43,9 +43,21 @@ h1:hover span {
 }
 
 /* Paragraph elements */
+a:link{
+    color:green;
+    background-color: transparent;
+    text-decoration: none;
+}
+
 a:visited {
     color: #96008c;
 }
+
+a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+  }
 
 p {
     font: sans-serif;
@@ -66,7 +78,7 @@ p {
 .center {
     text-align: center; /* This centers the text */
     position: relative; /* Position relative to allow z-index to work */
-    z-index: 1; /* Ensure the text stays above the pseudo-element */
+    z-index: 0; /* Ensure the text stays above the pseudo-element */
     transition: transform 0.1s ease-in-out; /* Apply a smooth transition */
 }
 
@@ -153,7 +165,7 @@ footer {
     overflow: hidden; /* This ensures that any content that overflows beyond the boundary of our nav bar is not displayed */
     background-color: rgb(0, 69, 148); /* This colors the navbar black */
     position: fixed; /* This keeps the navbar at the top of the screen as we scroll */
-    top: 0; /* This ensures no space is displayed above the navbar */
+    top: 1; /* This ensures no space is displayed above the navbar */
     width: 100%; /* This makes the navbar span the entire width of the page */
     z-index: 1; /* This ensures other elements don't display over the navbar */
     -webkit-animation: moveNav 5s; /* This applies the moveNav animation below for Safari 4.0 - 8.0 */
@@ -202,8 +214,8 @@ footer {
 
 /* Navbar hover effects */
 .Navbar a:hover {
-    background-color: #626262; /* Defines the background color that will display when you hover over the link */
-    color: rgb(103, 89, 89); /* This defines the font color that will display when navbar a elements are hovered over */
+    background-color: rgb(0, 21, 179); /* Defines the background color that will display when you hover over the link */
+    color: white; /* This defines the font color that will display when navbar a elements are hovered over */
     font-weight: bold; /* This makes the text on the navbar bold when hovered over */
 }
 
@@ -240,6 +252,7 @@ footer {
     position: relative; /* This sets the text relative to its normal positioning, allowing us to use the animation below */
     -webkit-animation: moveVideoText 1s forwards;
     animation: moveVideoText 1s forwards;
+    z-index: 0;
 }
 
 /* This animation effect causes the overlay video text to move up from the bottom of the page upon page load */
