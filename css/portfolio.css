@@ -47,10 +47,12 @@ a:link{
     color:green;
     background-color: transparent;
     text-decoration: none;
+    z-index: 0;
 }
 
 a:visited {
     color: #96008c;
+    z-index: 0;
 }
 
 a:hover {
